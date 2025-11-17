@@ -1,5 +1,5 @@
 
-Note: For Developing the NLP-Azure-Kernel-Function solution, i have take online code suggestion AI Tools.
+Note: For Developing the NLP-Azure-Kernel-Function solution, i have used online code suggestion AI Tools.
 
 - How to run/test.
 	- To Run Locally: Clone the repository and open the solution in Visual Studio. 
