@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "NLP_Azure_Kernel_Function": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7144",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
