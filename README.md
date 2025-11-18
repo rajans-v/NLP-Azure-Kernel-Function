@@ -4,9 +4,9 @@ Note: For Developing the NLP-Azure-Kernel-Function solution, i have used online 
 - How to run/test.
 	- To Run Locally: Clone the repository and open the solution in Visual Studio. 
 	- Set the startup project to NLP-Azure-Kernel-Function.
-	- build and run the project. 
+	- build and run the project.
+    - From the console window Note down the Function Name endpoint URL, to verify.
 	- Ensure you have the necessary environment variables set for Azure OpenAI and Redis.
-	- Note down the Function Name endpoint URL
 
 - Required environment variables (Azure OpenAI, Redis, feature flags like USE_REDIS).
 	- Keep the below environment under local.settings.json
@@ -23,17 +23,17 @@ Note: For Developing the NLP-Azure-Kernel-Function solution, i have used online 
            "sessionId": "postman-test-2"
       }
 	  Example of Message content/Interactions:
-      Q: “What is the width of 6205?”
-      Expected Ans: “The width of the 6205 bearing is 15 mm.”
+      Q: â€œWhat is the width of 6205?â€
+      Expected Ans: â€œThe width of the 6205 bearing is 15 mm.â€
 
-	  Q: Follow-up using state: “And what about its diameter?”
-      Expected Ans: “The diameter of the 6205 bearing is … mm.”
+	  Q: Follow-up using state: â€œAnd what about its diameter?â€
+      Expected Ans: â€œThe diameter of the 6205 bearing is â€¦ mm.â€
 
-	  Q: Feedback: “That last width is wrong—store my correction: 6205 width 15 mm.”
-      Expected Ans: “Thanks—your feedback for 6205 / width has been saved.”
+	  Q: Feedback: â€œThat last width is wrongâ€”store my correction: 6205 width 15 mm.â€
+      Expected Ans: â€œThanksâ€”your feedback for 6205 / width has been saved.â€
 
-	  Q: Not Found: “Diameter for 9999?”
-      Expected Ans: “Sorry, I can’t find that information for ‘9999’. Please try another designation or attribute.”
+	  Q: Not Found: â€œDiameter for 9999?â€
+      Expected Ans: â€œSorry, I canâ€™t find that information for â€˜9999â€™. Please try another designation or attribute.â€
 
 - Notes on caching, hallucination reduction, and conversational state.
     - Caching: Implemented using Redis to store and retrieve previous interactions,
@@ -42,7 +42,7 @@ Note: For Developing the NLP-Azure-Kernel-Function solution, i have used online 
 	   and attribute validation ensures responses match actual product specifications.
 	- Redis-backed sessions maintain context across requests
 	
-- AI Validation Notes: a short summary (bulleted) of AI feedback you applied—covering architecture, security, clean code, and patterns.
+- AI Validation Notes: a short summary (bulleted) of AI feedback you appliedâ€”covering architecture, security, clean code, and patterns.
 	- Agent-based design with orchestrator routing to specialized agents (QA, Feedback)
 	- Semantic Kernel integration for AI orchestration and function calling
 	- Error handling that avoids exposing internal details
